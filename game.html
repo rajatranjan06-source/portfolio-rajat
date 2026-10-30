@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rajat Ranjan | Full-Stack & Gen AI Developer<</title>
+  <meta name="description" content="Portfolio of Aria Vale, a creative developer crafting interactive 3D web experiences, brands and digital products.">
+  <meta name="theme-color" content="#07070c">
+  <meta property="og:title" content="Aria Vale | Creative Developer and 3D Designer">
+  <meta property="og:description" content="Interactive 3D web experiences, brands and digital products.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <script>
+    document.documentElement.classList.add('js');
+    // Safety net: if the module script cannot run, never leave the visitor behind the loader.
+    setTimeout(function () {
+      if (!document.body.classList.contains('is-loading')) return;
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-ready');
+      document.querySelectorAll('[data-reveal],[data-split]').forEach(function (el) { el.classList.add('is-in'); });
+    }, 5000);
+  </script>
+</head>
+<body class="is-loading">
+  <div class="loader" aria-hidden="true">
+    <div class="loader__panel loader__panel--a"></div>
+    <div class="loader__panel loader__panel--b"></div>
+    <div class="loader__inner">
+      <span class="loader__count">0</span>
+      <span class="loader__label">Loading worlds</span>
+    </div>
+  </div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em class="cursor__label"></em></span></div>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top" data-magnetic aria-label="Back to top">RR<span>.</span></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work" data-nav="1">Work</a>
+      <a href="#about" data-nav="2">About</a>
+      <a href="#contact" data-nav="3">Contact</a>
+    </nav>
+    <div class="nav__progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main>
+    <section id="top" class="section hero" data-section>
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>Available for internships and projects</p>
+        <h1 class="hero__title" data-split>RAJAT RANJAN.</h1>
+        <p class="hero__lead" data-reveal style="--d:500ms">Software Development Intern building <strong>full-stack</strong> web apps and <strong>Generative AI</strong> applications that feel like the future.</p>
+        <div class="hero__cta" data-reveal style="--d:700ms">
+          <a class="btn btn--solid" href="#work" data-magnetic><span>View projects</span></a>
+          <a class="btn" href="#contact" data-magnetic><span>Say hello</span></a>
+          <a class="btn btn--solid" href="game.html" data-magnetic><span>Play Hyper Shift</span></a>
+        </div>
+        <p class="meta mono">Noida, India &middot; <a href="mailto:Rajatranjan06@gmail.com">Rajatranjan06@gmail.com</a></p>
+      </div>
+      <div class="hero__foot" data-reveal style="--d:900ms">
+        <span class="hint"><i class="hint__mouse"></i>Scroll to explore</span>
+        <span class="hint hint--right">Move your cursor. Click the shape.</span>
+      </div>
+    </section>
+
+    <section id="work" class="section work" data-section>
+      <div class="wrap">
+        <header class="section__head">
+          <span class="section__num" data-reveal>01</span>
+          <h2 class="section__title" data-split>Selected work</h2>
+          <p class="section__lead" data-reveal style="--d:300ms">A few projects where code, motion and 3D meet. Open one to dive in.</p>
+        </header>
+
+        <div class="grid">
+          <button class="card" data-project="0" data-reveal style="--a:#8b5cf6;--b:#22d3ee">
+            <span class="card__cover cover"><i class="cover__blob"></i><b class="cover__num">01</b><span class="card__glare"></span></span>
+            <span class="card__meta"><span class="card__title">Lumen</span><span class="card__kind">WebGL product configurator</span><span class="card__year">2026</span></span>
+          </button>
+          <button class="card" data-project="1" data-reveal style="--a:#f97316;--b:#ec4899">
+            <span class="card__cover cover"><i class="cover__blob"></i><b class="cover__num">02</b><span class="card__glare"></span></span>
+            <span class="card__meta"><span class="card__title">Driftwood</span><span class="card__kind">Brand identity and website</span><span class="card__year">2025</span></span>
+          </button>
+          <button class="card" data-project="2" data-reveal style="--a:#10b981;--b:#a3e635">
+            <span class="card__cover cover"><i class="cover__blob"></i><b class="cover__num">03</b><span class="card__glare"></span></span>
+            <span class="card__meta"><span class="card__title">Pulse</span><span class="card__kind">Audio reactive data visuals</span><span class="card__year">2025</span></span>
+          </button>
+          <button class="card" data-project="3" data-reveal style="--a:#3b82f6;--b:#e879f9">
+            <span class="card__cover cover"><i class="cover__blob"></i><b class="cover__num">04</b><span class="card__glare"></span></span>
+            <span class="card__meta"><span class="card__title">Atlas</span><span class="card__kind">Interactive story map</span><span class="card__year">2024</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about" data-section>
+      <div class="wrap about__wrap">
+        <header class="section__head">
+          <span class="section__num" data-reveal>02</span>
+          <h2 class="section__title" data-split>About me</h2>
+        </header>
+        <div class="about__body">
+          <p class="about__big" data-reveal>I sit right between design and engineering, turning ideas into things you can move, spin and play with.</p>
+          <p data-reveal style="--d:150ms">For the past eight years I have worked with studios, startups and cultural brands to make the web feel less flat. I prototype fast, care about every frame, and love building interfaces that reward curiosity.</p>
+          <ul class="stats" data-reveal style="--d:300ms">
+            <li><strong data-count="8">0</strong><span>years building for the web</span></li>
+            <li><strong data-count="40">0</strong><span>launched projects</span></li>
+            <li><strong data-count="12">0</strong><span>awards and mentions</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="marquee" aria-label="Skills: Three.js, WebGL, GLSL shaders, Creative coding, Motion design, React, Blender, Brand systems">
+        <div class="marquee__track" aria-hidden="true">
+          <span>Three.js</span><span>WebGL</span><span>GLSL shaders</span><span>Creative coding</span><span>Motion design</span><span>React</span><span>Blender</span><span>Brand systems</span>
+          <span>Three.js</span><span>WebGL</span><span>GLSL shaders</span><span>Creative coding</span><span>Motion design</span><span>React</span><span>Blender</span><span>Brand systems</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" data-section>
+      <div class="wrap contact__wrap">
+        <span class="section__num" data-reveal>03</span>
+        <h2 class="contact__title" data-split>Let's make something unreal.</h2>
+        <p class="section__lead" data-reveal style="--d:400ms">Open for freelance projects and collaborations. Tell me what you are dreaming up.</p>
+        <a class="contact__mail" href="mailto:hello@ariavale.design" data-magnetic data-reveal style="--d:550ms"><span>hello@ariavale.design</span></a>
+        <ul class="socials" data-reveal style="--d:700ms">
+          <li><a href="#" data-magnetic>GitHub</a></li>
+          <li><a href="#" data-magnetic>Dribbble</a></li>
+          <li><a href="#" data-magnetic>LinkedIn</a></li>
+          <li><a href="#" data-magnetic>Instagram</a></li>
+        </ul>
+      </div>
+      <footer class="footer">
+        <span>&copy; <span class="year">2026</span> Aria Vale</span>
+        <span>Made with Three.js and a lot of coffee</span>
+        <a href="#top">Back to top &uarr;</a>
+      </footer>
+    </section>
+  </main>
+
+  <div class="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
+    <button class="case__close" type="button" aria-label="Close project"><span></span><span></span></button>
+    <div class="case__scroll">
+      <article class="case__inner">
+        <p class="case__eyebrow"><span class="case__index">01</span> / <span class="case__kind"></span></p>
+        <h2 id="case-title" class="case__title" data-case-title></h2>
+        <p class="case__summary"></p>
+        <div class="case__cover cover"><i class="cover__blob"></i><i class="cover__blob cover__blob--two"></i></div>
+        <dl class="case__meta">
+          <div><dt>Year</dt><dd class="case__year"></dd></div>
+          <div><dt>Role</dt><dd class="case__role"></dd></div>
+          <div><dt>Stack</dt><dd class="case__stack"></dd></div>
+        </dl>
+        <div class="case__body"></div>
+        <ul class="case__stats"></ul>
+        <button class="case__next" type="button"><span class="case__next-label">Next project</span><span class="case__next-title"></span></button>
+      </article>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js?v=1"></script>
+</body>
+</html>
