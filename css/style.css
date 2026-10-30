@@ -242,3 +242,11 @@ main, .nav { position: relative; z-index: 3; }
   *, *::before, *::after { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; transition-delay: 0s !important; }
   .grain { display: none; }
 }
+
+/* ---------- case actions (project links) ---------- */
+.case__actions { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 80px; }
+.case__link { display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 28px; border-radius: 999px; font-weight: 600; font-size: 14px; transition: background 0.35s, color 0.35s, border-color 0.35s; }
+.case__link--primary { background: linear-gradient(90deg, var(--a), var(--b)); color: #0b0718; }
+.case__link--primary:hover { filter: brightness(1.12); }
+.case__link--secondary { border: 1px solid var(--line); color: var(--fg); }
+.case__link--secondary:hover { background: var(--fg); color: var(--bg); }

@@ -15,52 +15,68 @@ const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 /* ------------------------------------------------------------------ */
 const PROJECTS = [
   {
-    title: 'Lumen', kind: 'WebGL product configurator', year: '2026',
-    role: 'Creative development, 3D', stack: 'Three.js, GLSL, TypeScript',
+    title: 'AirDrawer', kind: 'AI hand-tracking web app', year: '2026',
+    role: 'Full-stack and creative development',
+    stack: 'React + Vite, MediaPipe, Framer Motion',
     a: '#8b5cf6', b: '#22d3ee',
-    summary: 'A real time configurator that lets shoppers shape a lamp in light, material and form, rendered live in the browser.',
+    summary: 'Draw in the air with one hand, move and scale your strokes with the other, all running at 60fps in the browser.',
     body: [
-      'Lumen sells designer lamps with hundreds of finish and shade combinations. Photographing every one was impossible, so the brief was simple: let people build their own lamp and see it exactly as it will arrive.',
-      'I built a physically based scene with baked light maps and a handful of custom shaders, so every change of brass, glass or fabric feels instant, even on a mid range phone. Soft camera moves guide the eye without ever taking control away.',
-      'The configurator now sits at the heart of the store, and it quietly does the job of a showroom.'
+      'Most drawing tools require a stylus or mouse. The idea here was simpler: raise your hands in front of a camera and start drawing. One hand draws; the other moves, scales, and rotates what you made.',
+      'I built a WebGL rendering layer on top of MediaPipe hand tracking, added matrix-based non-destructive transforms so no stroke data is ever lost, and wrapped everything in a glassmorphism UI that stays out of the way.'
     ],
-    stats: [['+38%', 'time on product pages'], ['60fps', 'on mobile devices'], ['1.2MB', 'total 3D payload']]
+    stats: [['MediaPipe', 'hand tracking'], ['React + Vite', 'frontend'], ['WebGL', 'rendering']],
+    links: {
+      live: 'https://air-drawer-two.vercel.app',
+      github: 'https://github.com/rajatranjan06-source/AirDrawer'
+    }
   },
   {
-    title: 'Driftwood', kind: 'Brand identity and website', year: '2025',
-    role: 'Art direction, design, development', stack: 'Figma, Astro, GSAP',
+    title: 'Persona Support Agent', kind: 'AI customer support system', year: '2026',
+    role: 'Gen AI and backend development',
+    stack: 'Python, Streamlit, ChromaDB, Google Gemini',
     a: '#f97316', b: '#ec4899',
-    summary: 'A coastal hotel brand built around slow living, warm light and the rhythm of the tide.',
+    summary: "A support agent that reads the customer's tone, retrieves relevant docs, and either replies or hands off to a human.",
     body: [
-      'Driftwood wanted a site that felt like the first evening of a holiday. We started with sound and motion before a single layout: waves, long shadows and a palette that shifts with the time of day.',
-      'The website changes its colors based on the local hour at the hotel, and room pages unfold like postcards. Booking stays two clicks away at all times.',
-      'The new identity rolled out across signage, menus and social, all from one flexible system.'
+      'Generic chatbots give the same response to a panicking user and a calm technical one. This agent detects three communication personas first, then adjusts its reply style or escalates with a structured handoff ticket if the query is sensitive or out of scope.',
+      'The pipeline runs persona classification through Gemini, embeds docs into ChromaDB, scores retrieval confidence with cosine similarity in NumPy, and surfaces everything through a Streamlit dashboard.'
     ],
-    stats: [['2x', 'direct bookings'], ['4', 'time of day palettes'], ['92', 'Lighthouse performance']]
+    stats: [['Gemini', 'LLM + embeddings'], ['ChromaDB', 'vector database'], ['Streamlit', 'UI dashboard']],
+    links: {
+      live: 'https://persona-adaptive-saas-customer-support-agent.streamlit.app/',
+      github: 'https://github.com/rajatranjan06-source/Persona-Adaptive-Customer-Support-Agent'
+    }
   },
   {
-    title: 'Pulse', kind: 'Audio reactive data visuals', year: '2025',
-    role: 'Creative coding, shaders', stack: 'WebGL, Web Audio, React',
+    title: 'iFeels', kind: 'Dance studio booking platform', year: '2026',
+    role: 'Full-stack development',
+    stack: 'React, TypeScript, Supabase, Tailwind CSS',
     a: '#10b981', b: '#a3e635',
-    summary: 'Live visuals for a music festival that turn every track and every crowd cheer into moving light.',
+    summary: 'A studio platform where dancers browse classes, book spots, and track their schedule from one dashboard.',
     body: [
-      'Pulse drove the giant screens of a three day electronic music festival. Each artist had a visual world that reacted to the beat, the frequency spectrum and the noise of the crowd picked up by stage microphones.',
-      'Everything ran in a browser on stage machines, which made it easy for VJs to tweak parameters live from a tablet.',
-      'After the event, the same engine became an interactive recap site where fans could replay any set.'
+      'Dance studios often manage bookings through DMs and spreadsheets. iFeels gives both students and instructors a clean interface: browse classes by style or difficulty, join with one click, and see your upcoming schedule at a glance.',
+      "Built with React and TypeScript on the frontend, Supabase for auth and data, and a component library based on Radix UI and Tailwind. The dashboard pulls personalised class recommendations based on a user's preferred styles."
     ],
-    stats: [['18', 'visual worlds'], ['3', 'days live on stage'], ['250k', 'recap site visitors']]
+    stats: [['Supabase', 'auth and database'], ['React + Vite', 'frontend'], ['Radix UI', 'component library']],
+    links: {
+      live: 'https://ifeels.vercel.app',
+      github: 'https://github.com/rajatranjan06-source/Ifeels'
+    }
   },
   {
-    title: 'Atlas', kind: 'Interactive story map', year: '2024',
-    role: 'Design and development', stack: 'Mapbox GL, Three.js, D3',
+    title: 'Dentis', kind: 'Dental clinic website', year: '2026',
+    role: 'Frontend development',
+    stack: 'HTML, CSS, JavaScript',
     a: '#3b82f6', b: '#e879f9',
-    summary: 'A scroll driven journey across five continents that follows the migration of a single bird.',
+    summary: "A single-file clinic website for a dental practice in Lucknow, with dark mode and a contact form.",
     body: [
-      'Atlas was made with a nature magazine to tell a long form story in a new way. As you scroll, the globe turns, the seasons change and the path of the bird draws itself across the map.',
-      'Real tracking data powers the route, while illustrated chapters open at each stopover. The whole piece works with keyboard and screen readers too.',
-      'It became the most read feature of the year for the magazine.'
+      "Dr. Dee's Dental needed a fast, professional site that patients could open on any device without a slow load. The brief called for a calm, trustworthy look, light and dark themes, and a contact form without any backend dependency.",
+      'I wrote the entire site as one self-contained HTML file: CSS variables handle the two themes, smooth scroll links the sections, and lightweight JS handles the mobile nav and form feedback. No build step, no frameworks.'
     ],
-    stats: [['14 min', 'average read time'], ['5', 'continents'], ['1', 'very determined bird']]
+    stats: [['HTML + CSS', 'single-file build'], ['Dark mode', 'CSS variables'], ['Vanilla JS', 'interactions']],
+    links: {
+      live: 'https://dentis-website-omega.vercel.app',
+      github: 'https://github.com/rajatranjan06-source/dentis-website'
+    }
   }
 ];
 
@@ -561,6 +577,10 @@ function fillCase(i) {
     return li;
   }));
   $('.case__next-title').textContent = PROJECTS[(i + 1) % PROJECTS.length].title;
+  const liveLink = $('.case__link--primary');
+  const ghLink = $('.case__link--secondary');
+  if (p.links && p.links.live) { liveLink.href = p.links.live; liveLink.style.display = ''; } else { liveLink.style.display = 'none'; }
+  if (p.links && p.links.github) { ghLink.href = p.links.github; ghLink.style.display = ''; } else { ghLink.style.display = 'none'; }
   $('.case__scroll').scrollTop = 0;
 }
 
@@ -633,9 +653,9 @@ addEventListener('keydown', (e) => {
   }
 });
 
-// deep link like #work/lumen opens the project
-const deep = location.hash.match(/^#work\/(\w+)/);
+// deep link like #work/airdrawer opens the project
+const deep = location.hash.match(/^#work\/(.+)/);
 if (deep) {
-  const i = PROJECTS.findIndex((p) => p.title.toLowerCase() === deep[1]);
+  const i = PROJECTS.findIndex((p) => p.title.toLowerCase() === decodeURIComponent(deep[1]).trim().toLowerCase());
   if (i >= 0) setTimeout(() => openCase(i, innerWidth / 2, innerHeight / 2), 1900);
 }
