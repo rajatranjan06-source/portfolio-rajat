@@ -15,27 +15,28 @@ const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 /* ------------------------------------------------------------------ */
 const PROJECTS = [
   {
-    title: 'AirDrawer', year: '2026',
-    role: 'Creative development, 3D', stack: 'React + Vite',
+    title: 'Lumen', kind: 'WebGL product configurator', year: '2026',
+    role: 'Creative development, 3D', stack: 'Three.js, GLSL, TypeScript',
     a: '#8b5cf6', b: '#22d3ee',
-    summary: '>Draw in the air with one hand and move, scale and rotate your strokes with the other. Real-time hand tracking in the browser with a neon glass interface.',
+    summary: 'A real time configurator that lets shoppers shape a lamp in light, material and form, rendered live in the browser.',
     body: [
-      'A high-performance, real-time AI air drawing web application that utilizes advanced hand tracking for a "Minority Report" style spatial interface.',
-      'Draw in the air with your dominant hand and manipulate your creations in real-time with your non-dominant hand using intuitive gestures (Move, Scale, Rotate).',
+      'Lumen sells designer lamps with hundreds of finish and shade combinations. Photographing every one was impossible, so the brief was simple: let people build their own lamp and see it exactly as it will arrive.',
+      'I built a physically based scene with baked light maps and a handful of custom shaders, so every change of brass, glass or fabric feels instant, even on a mid range phone. Soft camera moves guide the eye without ever taking control away.',
+      'The configurator now sits at the heart of the store, and it quietly does the job of a showroom.'
     ],
-    stats: [['Animations: Framer Motion'], ['Hand Tracking: @mediapipe/hands'], ['link']]
+    stats: [['+38%', 'time on product pages'], ['60fps', 'on mobile devices'], ['1.2MB', 'total 3D payload']]
   },
   {
-    title: 'Persona-Adaptive-Customer-Support-Agent', kind: 'Brand identity and website', year: '2025',
+    title: 'Driftwood', kind: 'Brand identity and website', year: '2025',
     role: 'Art direction, design, development', stack: 'Figma, Astro, GSAP',
     a: '#f97316', b: '#ec4899',
-    summary: 'An intelligent, production-ready support agent that runs real-time triage, classification, and retrieval-augmented generation (RAG) for SaaS product customer service queries.',
+    summary: 'A coastal hotel brand built around slow living, warm light and the rhythm of the tide.',
     body: [
-      'The application detects the customer's communication persona (style and tone), queries an internal documentation vector database (ChromaDB), evaluates confidence thresholds and business rules to check for human escalation, and either responds in an adapted style or prepares a structured handoff ticket.',
-      'The system processes customer queries through gemini-flash-lite-latest using the Google GenAI SDK's structured outputs (response_schema), forcing a strict Pydantic model (PersonaClassification) representation.',
-      
+      'Driftwood wanted a site that felt like the first evening of a holiday. We started with sound and motion before a single layout: waves, long shadows and a palette that shifts with the time of day.',
+      'The website changes its colors based on the local hour at the hotel, and room pages unfold like postcards. Booking stays two clicks away at all times.',
+      'The new identity rolled out across signage, menus and social, all from one flexible system.'
     ],
-    stats: [['Core Runtime: python 3.11+'], ['Large Language Model API: google-genai (v2.8.0)'], ['link']]
+    stats: [['2x', 'direct bookings'], ['4', 'time of day palettes'], ['92', 'Lighthouse performance']]
   },
   {
     title: 'Pulse', kind: 'Audio reactive data visuals', year: '2025',
